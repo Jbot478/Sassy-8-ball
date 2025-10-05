@@ -1,12 +1,14 @@
 const messages = [
     "Sure, Jan.",
     "Ask again when Mercury’s not in retrograde.",
-    "In your dreams, sweetheart.",
+    "Yes, but do a little dance first.",
     "Oh honey… no.",
     "You wish.",
-    "Let me think—no.",
+    “Yes, you miserable genius.”,
+    “Absolutely… because why not ruin everything?”,
+    "Let me think....... no.",
     "Bless your heart.",
-    "Try again, drama queen.",
+    "Try again, I wasn'nt listening.",
     "The vibe says... absolutely not.",
     "Did you really need to ask that?"
   ];
@@ -29,4 +31,5 @@ const messages = [
   
   askBtn.addEventListener("click", getSassyReply);
   eightBall.addEventListener("click", getSassyReply);
+
   
