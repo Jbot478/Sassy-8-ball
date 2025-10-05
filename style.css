@@ -1,84 +1,69 @@
-/* Body and general layout */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  text-align: center;
-  background-color: #1a1a1a;
-  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+  background-color: #fff8e1; /* light cream background so black 8-ball pops */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  height: 100vh;
   margin: 0;
+  text-align: center;
+  color: #4a2f0f;
 }
 
-/* Heading */
 h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-  color: #ffeb3b;
-}
-
-/* Instruction paragraph */
-p {
-  font-size: 1.2rem;
   margin-bottom: 20px;
-  max-width: 450px;
 }
 
-/* 8-Ball container */
+p {
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+}
+
 #eight-ball {
   width: 200px;
   height: 200px;
-  background: radial-gradient(circle at top left, #000000, #222222);
+  background-color: #000;
+  border: 8px solid #222;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  margin-bottom: 30px;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+#message {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  color: #000;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 20px;
-  box-shadow: 0 0 20px #000000 inset, 0 8px 20px rgba(0,0,0,0.5);
-  cursor: pointer;
-  transition: transform 0.1s;
-}
-
-/* Message inside the ball */
-#message {
-  color: #00ffff;
   font-weight: bold;
   text-align: center;
   padding: 10px;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
-/* Ask button */
 #ask-btn {
-  padding: 12px 25px;
+  background-color: #001f3f; /* inky blue */
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
   font-size: 1.1rem;
   font-weight: bold;
-  border: none;
-  border-radius: 10px;
-  background-color: #ff4081;
-  color: white;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: background-color 0.2s, transform 0.1s;
 }
 
 #ask-btn:hover {
-  background-color: #ff79a8;
-  transform: scale(1.1);
-}
-
-/* Shake animation for the ball */
-.shake {
-  animation: shake 0.3s;
-}
-
-@keyframes shake {
-  0% { transform: rotate(0deg); }
-  20% { transform: rotate(15deg); }
-  40% { transform: rotate(-15deg); }
-  60% { transform: rotate(10deg); }
-  80% { transform: rotate(-10deg); }
-  100% { transform: rotate(0deg); }
+  background-color: #003366;
+  transform: scale(1.05);
 }
