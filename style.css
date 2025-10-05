@@ -1,0 +1,61 @@
+body {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    background: radial-gradient(circle at top, #141414, #000);
+    color: #fff;
+    text-align: center;
+    padding-top: 60px;
+  }
+  
+  h1 {
+    color: #ff8ad4;
+    text-shadow: 0 0 10px #ff8ad4;
+  }
+  
+  #eight-ball {
+    width: 220px;
+    height: 220px;
+    background: radial-gradient(circle at 30% 30%, #222, #000);
+    border-radius: 50%;
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 40px #ff8ad4;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  #eight-ball:hover {
+    transform: scale(1.05);
+  }
+  
+  #message {
+    width: 140px;
+    height: 140px;
+    background: #222;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    color: #ffb3e6;
+    font-size: 1.1em;
+    border: 2px solid #ff8ad4;
+  }
+  
+  #ask-btn {
+    background: #ff8ad4;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    color: #000;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  #ask-btn:hover {
+    background: #ffc1f3;
+  }
+  
