@@ -4,8 +4,8 @@ const messages = [
     "Yes, but do a little dance first.",
     "Oh honey… no.",
     "You wish.",
-    “Yes, you miserable genius.”,
-    “Absolutely… because why not ruin everything?”,
+  "Yes, you miserable genius.",
+"Absolutely… because why not ruin everything?",
     "Let me think....... no.",
     "Bless your heart.",
     "Try again, I wasn'nt listening.",
@@ -33,3 +33,4 @@ const messages = [
   eightBall.addEventListener("click", getSassyReply);
 
   
+
