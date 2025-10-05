@@ -20,50 +20,54 @@ p {
   font-size: 1.1rem;
 }
 
-#eight-ball {
-  width: 200px;
-  height: 200px;
-  background-color: #000;
-  border: 8px solid #222;
+#eight-ball::after {
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  width: 30%;
+  height: 30%;
   border-radius: 50%;
-  position: relative;
+  background: rgba(255,255,255,0.25); /* glossy reflection */
+  pointer-events: none; /* so it doesn't block clicks */
+}
+
+#eight-ball:hover {
+  box-shadow: 0 0 20px #fff, 0 0 40px #0ff, 0 0 60px #0ff; /* glowing on hover */
+  transform: scale(1.05);
+}
+
+
+#eight-ball {
+  width: 200px;             
+  height: 200px;            
+  background: radial-gradient(circle at top left, #444 0%, #000 80%); /* 3D shiny effect */
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-  margin-bottom: 30px;
   cursor: pointer;
-  transition: transform 0.1s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6); /* deeper shadow for depth */
+  transition: transform 0.2s, box-shadow 0.2s; 
+  position: relative;
+  margin: 40px auto; /* centers on the page */
 }
 
 #message {
-  width: 100px;
-  height: 100px;
-  background-color: #fff;
-  color: #000;
-  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle at top left, #111 0%, #000 100%); /* mini 3D inside ball */
+  color: #0ff;              
+  font-weight: bold;
+  font-size: 1rem;       
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: bold;
-  text-align: center;
+  border-radius: 50%;
+  text-shadow: 0 0 8px #0ff, 0 0 16px #0ff; /* glowing text */
+  pointer-events: none; /* ensures clicks go to the parent #eight-ball */
+  box-shadow: inset 0 0 15px rgba(0,255,255,0.3); /* inner glow for magic effect */
   padding: 10px;
-  font-size: 0.9rem;
 }
 
-#ask-btn {
-  background-color: #001f3f; /* inky blue */
-  color: #fff;
-  border: none;
-  border-radius: 12px;
-  padding: 12px 24px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.2s, transform 0.1s;
-}
-
-#ask-btn:hover {
-  background-color: #003366;
-  transform: scale(1.05);
-}
